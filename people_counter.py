@@ -245,7 +245,7 @@ def people_counter():
 
     cv2.destroyAllWindows()
 
-    final_counts = {'total_people_inside': totalDown}
+    final_counts = {'total_people_inside': totalDown - totalUp}
     with open('final_counts.json', 'w') as file:
         json.dump(final_counts, file)
 
